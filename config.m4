@@ -1,9 +1,8 @@
-PHP_ARG_ENABLE(zhazha,
-	[whether to enable the "zhazha" extension],
-	[enable-zhazha Enable "zhazha" extension]
-)
+PHP_ARG_ENABLE(walu,
+    [Whether to enable the "walu" extension],
+    [  enable-walu        Enable "walu" extension support])
 
-if test $PHP_zhazha != "no"; then
-	PHP_SUBST(WALU_SHARED_LIBADD)
-	PHP_NEW_EXTENSION(zhazha, zhazha.c, $ext_shared)
-if
+if test $PHP_WALU != "no"; then
+    PHP_SUBST(WALU_SHARED_LIBADD)
+    PHP_NEW_EXTENSION(walu, walu.c, $ext_shared)
+fi
